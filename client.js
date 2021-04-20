@@ -131,7 +131,7 @@ function createBonus( employee ){
 
 function creatNewEmployee(employee) {
   let newBonus = createBonus( employee );
-  let newComp = employee.annualSalary + employee.annualSalary * createBonus( employee );
+  let newComp = parseFloat(employee.annualSalary) + parseFloat(employee.annualSalary) * createBonus( employee );
   let newTotal = Math.round(employee.annualSalary * createBonus( employee ));
 
 
