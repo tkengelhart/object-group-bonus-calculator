@@ -40,7 +40,7 @@ const employees = [
 // This is not a race. Everyone on your team should understand what is happening.
 // Ask questions when you don't.
 
-console.log( employees );
+console.log(employees);
 
 /*
 
@@ -59,40 +59,40 @@ and should receive an additional 5%.
 
 let newArray = [];
 
-function createBonus( employee ){
-    if (employee.reviewRating <= 2 && employee.employeeNumber.length > 4 ) {
-      if (employee.annualSalary <= 65000) {
-        return 0;
-      }
-      else {
-        return 0;
-      }
+function createBonus(employee) {
+  if (employee.reviewRating <= 2 && employee.employeeNumber.length > 4) {
+    if (employee.annualSalary <= 65000) {
+      return 0;
     }
-    else if ( employee.reviewRating === 3 && employee.employeeNumber.length > 4 ) { 
-     if (employee.annualSalary <= 65000) {
+    else {
+      return 0;
+    }
+  }
+  else if (employee.reviewRating === 3 && employee.employeeNumber.length > 4) {
+    if (employee.annualSalary <= 65000) {
       return .04;
-     }
-     else {
-       return .03;
-     }
     }
-    else if ( employee.reviewRating === 4 && employee.employeeNumber.length > 4) {
-     if (employee.annualSalary <= 65000) {
+    else {
+      return .03;
+    }
+  }
+  else if (employee.reviewRating === 4 && employee.employeeNumber.length > 4) {
+    if (employee.annualSalary <= 65000) {
       return .06;
     }
     else {
       return .05;
     }
   }
-    else if ( employee.reviewRating === 5 && employee.employeeNumber.length > 4) {
-    if ( employee.annualSalary <= 65000) {
+  else if (employee.reviewRating === 5 && employee.employeeNumber.length > 4) {
+    if (employee.annualSalary <= 65000) {
       return .1;
     }
     else {
       return .09;
     }
   }
-    else if (employee.reviewRating <= 2 && employee.employeeNumber.length <= 4) { 
+  else if (employee.reviewRating <= 2 && employee.employeeNumber.length <= 4) {
     if (employee.annualSalary <= 65000) {
       return .05;
     }
@@ -100,39 +100,39 @@ function createBonus( employee ){
       return .05;
     }
   }
-    else if ( employee.reviewRating === 3 && employee.employeeNumber.length <= 4) {
-      if (employee.annualSalary <= 65000) {
+  else if (employee.reviewRating === 3 && employee.employeeNumber.length <= 4) {
+    if (employee.annualSalary <= 65000) {
       return .09;
     }
     else {
       return .08;
     }
   }
-    else if ( employee.reviewRating === 4 && employee.employeeNumber.length <= 4) {
-      if( employee.annualSalary <= 65000) {
+  else if (employee.reviewRating === 4 && employee.employeeNumber.length <= 4) {
+    if (employee.annualSalary <= 65000) {
       return .11;
     }
     else {
       return .10;
     }
   }
-    else if ( employee.reviewRating === 5 && employee.employeeNumber.length <= 4) {
-      if ( employee.annualSalary <= 65000) {
+  else if (employee.reviewRating === 5 && employee.employeeNumber.length <= 4) {
+    if (employee.annualSalary <= 65000) {
       return .13;
     }
     else {
       return .13;
     }
-}
+  }
 }
 
 
 
 
 function creatNewEmployee(employee) {
-  let newBonus = createBonus( employee );
-  let newComp = parseFloat(employee.annualSalary) + parseFloat(employee.annualSalary) * createBonus( employee );
-  let newTotal = Math.round(employee.annualSalary * createBonus( employee ));
+  let newBonus = createBonus(employee);
+  let newComp = parseFloat(employee.annualSalary) + parseFloat(employee.annualSalary) * createBonus(employee);
+  let newTotal = Math.round(employee.annualSalary * createBonus(employee));
 
 
   let newEmplyObj = {
